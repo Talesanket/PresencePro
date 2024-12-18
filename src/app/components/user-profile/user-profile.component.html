@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h1>User Profile</h1>
+
+  <!-- Check if userProfile is loaded -->
+  <div *ngIf="userProfile; else loading">
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <th>Username:</th>
+          <td>{{ userProfile.username }}</td>
+        </tr>
+        <tr>
+          <th>First Name:</th>
+          <td>{{ userProfile.firstName }}</td>
+        </tr>
+        <tr>
+          <th>Last Name:</th>
+          <td>{{ userProfile.lastName }}</td>
+        </tr>
+        <tr>
+          <th>Email:</th>
+          <td>{{ userProfile.email }}</td>
+        </tr>
+        <tr>
+          <th>Role:</th>
+          <td>{{ userProfile.role }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Loading State -->
+  <ng-template #loading>
+    <p>Loading user profile...</p>
+  </ng-template>
+
+  <!-- Back Button -->
+  <button class="btn btn-secondary mt-3" (click)="goBack()">Back to All Users</button>
+</div>

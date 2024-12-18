@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <h2>All Subjects</h2>
+
+  <!-- Display error message -->
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Show table only if there are subjects -->
+  <table class="table table-striped table-bordered" *ngIf="subjects.length > 0">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Subject ID</th>
+        <th>Subject Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let subject of subjects; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ subject.id }}</td>
+        <td>{{ subject.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

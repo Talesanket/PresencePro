@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Password</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Actions</th> <!-- Column for View and Delete -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of userList; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ u.username }}</td>
+      <td>{{ u.password | passwordMask }}</td> <!-- Applying the custom pipe -->
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.lastName }}</td>
+      <td>{{ u.email }}</td>
+      <td>{{ u.role }}</td>
+      <td>
+
+        <button class="btn btn-danger btn-sm" (click)="deleteUser(u.username)">Delete</button>
+
+      </td>
+      <td>
+        <a [routerLink]="['/user-profile', u.username]" class="btn btn-primary">View Profile</a>
+      </td>
+
+    </tr>
+  </tbody>
+</table>

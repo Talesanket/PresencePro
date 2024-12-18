@@ -1,0 +1,70 @@
+/* General Table Styling */
+.table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse; /* Remove space between table cells */
+  font-family: 'Arial', sans-serif; /* Use a clean font */
+}
+
+/* Table Header Styling */
+.table thead {
+  background-color: #007bff; /* Blue background for header */
+  color: #ffffff; /* White text */
+  text-align: left;
+  font-weight: bold;
+}
+
+.table th {
+  padding: 12px 15px; /* Add padding for readability */
+}
+
+/* Table Body Styling */
+.table tbody tr {
+  border-bottom: 1px solid #ddd; /* Light border under each row */
+}
+
+.table td {
+  padding: 12px 15px; /* Add padding for readability */
+}
+
+/* Hover Effect for Rows */
+.table tbody tr:hover {
+  background-color: #f2f2f2; /* Light grey background on hover */
+  cursor: pointer;
+}
+
+/* Table Cell Styling */
+.table td {
+  font-size: 14px;
+  color: #555; /* Darker text for better contrast */
+}
+
+/* Even Row Styling */
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light grey background for even rows */
+}
+
+/* Odd Row Styling */
+.table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+/* Optional: Add a border around the table */
+.table, .table th, .table td {
+  border: 1px solid #ddd;
+}
+
+/* Make the table responsive on small screens */
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 10px;
+    font-size: 12px; /* Smaller font size on smaller screens */
+  }
+  .table {
+    font-size: 12px; /* Decrease font size for mobile devices */
+  }
+}
+.table .btn {
+  margin-right: 5px;
+}
+
